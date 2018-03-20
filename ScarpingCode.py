@@ -79,7 +79,7 @@ def getReviews(page_url):
     return reviews
 
 def save(reviews):
-    file_name = "New_1.csv"
+    file_name = "New_2.csv"
     with open(file_name, "w") as f:
         writer = csv.writer(f, dialect = 'excel')
         writer.writerow(['Rating', 'Detailed review of the product'])
