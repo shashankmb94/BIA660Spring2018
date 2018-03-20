@@ -43,18 +43,8 @@ if __name__ == "__main__":
     reader = csv.reader(f)
     row = list(reader)
     reviews = []
-    #print(*row)
-    # for x in row:
-    #     reviews.append(x[1].decode('utf8'))
-    # # test = row.decode('utf8')
-    # #
-    # print(*reviews)
-    #
-    #
-    #
     for utf8_row in row:
         if utf8_row:
-            # print(utf8_row[1].encode().decode("utf8"))
             unicode_row = [utf8_row[1].encode().decode('utf8') for row in utf8_row]
             review = [utf8_row[0], clean_review(unicode_row[1])]
             reviews.append(review)
